@@ -1,5 +1,9 @@
 # Multiple gamepads support for the Godot Game Engine.
 
+ 
+![](https://github.com/tomankirilov/Godot-Multple-Gamepads-Input/blob/main/GodotInput.png)
+
+
 A simple class for managing multiple gamepads for your game.
 Just add a an instance of the class for each player and give it an ID.
 It is quite simple to use.
