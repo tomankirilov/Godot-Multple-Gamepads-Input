@@ -12,8 +12,8 @@ enum STATE {
 	RELEASED,
 	}
 
-var left_stick  :Vector3
-var right_stick :Vector3
+var left_stick  :Vector2
+var right_stick :Vector2
 var _btn_a       :bool
 var _btn_b       :bool
 var _btn_x       :bool
@@ -271,12 +271,12 @@ func _process(delta) -> void:
 			_btn_back = Input.is_joy_button_pressed(ID, 4)
 
 ####### LEFT STICK:
-	if Vector3(Input.get_joy_axis(ID, 0), 0,  Input.get_joy_axis(ID, 1)).length() > deadzone:
+	if Vector2(Input.get_joy_axis(ID, 0), Input.get_joy_axis(ID, 1)).length() > deadzone:
 		left_stick = Vector3(Input.get_joy_axis(ID, 0), 0,  Input.get_joy_axis(ID, 1))
 	else:
-		left_stick = Vector3.ZERO
+		left_stick = Vector2.ZERO
 ####### RIGHT STICK:
-	if Vector3(Input.get_joy_axis(ID, 2), 0,  Input.get_joy_axis(ID, 3)).length() > deadzone:
+	if Vector2(Input.get_joy_axis(ID, 2), Input.get_joy_axis(ID, 3)).length() > deadzone:
 		right_stick = Vector3(Input.get_joy_axis(ID, 2), 0,  Input.get_joy_axis(ID, 3))
 	else:
-		right_stick = Vector3.ZERO
+		right_stick = Vector2.ZERO
